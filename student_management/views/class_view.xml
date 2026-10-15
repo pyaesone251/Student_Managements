@@ -5,18 +5,28 @@
         <field name="model">school.class</field>
         <field name="arch" type="xml">
             <form>
-                <!-- <header>
-                    <button name="action_create" string="Create" type="object" class="btn btn-outline-success"/>
-                    <button name="action_search" string="Search" type="object" class="btn btn-outline-warning"/>
+                <header>
+                    <button name="action_count" string="Count" type="object" class="btn btn-outline-success"/>
+                    <button name="action_age" string="Age" type="object" class="btn btn-outline-warning"/>
                     <button name="action_write" string="Write" type="object" class="btn btn-outline-secondary"/>
-                    <button name="action_all_write" string="ALl Write" type="object" class="btn btn-outline-secondary"/>
+                    <!-- <button name="action_all_write" string="ALl Write" type="object" class="btn btn-outline-secondary"/>
                     <button name="action_delete" string="Delete" type="object" class="btn btn-outline-danger"/>
-                    <button name="action_show_class" string="Noti" type="object" class="btn btn-outline-primary" />
-                </header> -->
+                    <button name="action_show_class" string="Noti" type="object" class="btn btn-outline-primary" /> -->
+                </header>
                 <sheet>
                     <group>
                         <field name="name"/>
                     </group>
+                    <notebook>
+                        <page>
+                            <field name="student_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="age" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
